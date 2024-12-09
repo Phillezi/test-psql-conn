@@ -30,7 +30,7 @@ func Load() *Config {
 		DBPort:        util.GetEnvAsInt("DB_PORT", 5432),
 		DBUser:        util.GetEnv("DB_USER", "N/A"),
 		DBPass:        util.GetEnv("DB_PASS", "N/A"),
-		DBName:        util.GetEnv("DB", "N/A"),
+		DBName:        util.GetEnv("DB_NAME", "N/A"),
 		SleepWhenDone: strings.ToLower(util.GetEnv("SLEEP_INF", "true")) == "true",
 	}
 
