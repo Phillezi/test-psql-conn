@@ -14,4 +14,6 @@ COPY --from=builder /app/bin/test-psql-conn /app/exec
 
 ENV IS_DOCKER=true
 
+EXPOSE 8080
+
 ENTRYPOINT [ "/app/exec" ]
