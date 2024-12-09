@@ -11,7 +11,6 @@
 | `DB_NAME`    | The database name                    | `N/A`      |
 | `SLEEP_INF`  | Sleep infinitely when done           | `true`     |
 
-
 ## How to use
 
 ### In docker
@@ -23,7 +22,7 @@ docker run --rm -it \
         -e DB_USER=myuser \
         -e DB_PASS=mypassword \
         -e DB_NAME=mydb \
-        ghcr.io/phillezi/test-psql-conn:main
+        ghcr.io/phillezi/test-psql-conn:latest
 ```
 
 > [!NOTE]
