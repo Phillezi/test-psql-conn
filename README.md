@@ -19,11 +19,11 @@
 If you want to test if you can connect to a postgres db locally with docker you can try this,
 
 ```bash
-docker run --rm -it \ 
+docker run --rm -it \
         -e DB_USER=myuser \
-        -e DB_PASS=mypassword \ 
+        -e DB_PASS=mypassword \
         -e DB=mydb \
-        ghcr.io/Phillezi/test-psql-conn
+        ghcr.io/phillezi/test-psql-conn:main
 ```
 
 > [!NOTE]
