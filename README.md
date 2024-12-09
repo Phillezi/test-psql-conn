@@ -22,7 +22,7 @@ If you want to test if you can connect to a postgres db locally with docker you 
 docker run --rm -it \
         -e DB_USER=myuser \
         -e DB_PASS=mypassword \
-        -e DB=mydb \
+        -e DB_NAME=mydb \
         ghcr.io/phillezi/test-psql-conn:main
 ```
 
