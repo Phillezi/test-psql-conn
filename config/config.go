@@ -16,6 +16,7 @@ type Config struct {
 	DBPass        string
 	DBName        string
 	SleepWhenDone bool
+	ServeHTTP     bool
 }
 
 func Load() *Config {
@@ -32,6 +33,7 @@ func Load() *Config {
 		DBPass:        util.GetEnv("DB_PASS", "N/A"),
 		DBName:        util.GetEnv("DB_NAME", "N/A"),
 		SleepWhenDone: strings.ToLower(util.GetEnv("SLEEP_INF", "true")) == "true",
+		ServeHTTP:     strings.ToLower(util.GetEnv("SERVE_HTTP", "true")) == "true",
 	}
 
 	return config
@@ -53,6 +55,13 @@ func (c *Config) LogConfig() {
 		}
 		return "false"
 	}(c.SleepWhenDone))
+
+	printConfigVar("SERVE_HTTP", "Serve the status on /", func(val bool) string {
+		if val {
+			return "true"
+		}
+		return "false"
+	}(c.ServeHTTP))
 }
 
 func printConfigVar(envVar, description, value string) {
