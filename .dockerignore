@@ -1,3 +1,8 @@
 bin
-.github
-README.md
+config.yaml
+.git
+LICENCE
+*.md
+*db
+scripts
+Makefile

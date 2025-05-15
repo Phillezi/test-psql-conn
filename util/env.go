@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/sirupsen/logrus"
+	"go.uber.org/zap"
 )
 
 func GetEnv(key, defaultValue string) string {
@@ -36,7 +36,7 @@ func GetEnvAsDuration(key string, defaultValue time.Duration) time.Duration {
 }
 
 func LogEnvTable() {
-	logrus.Infoln("Environment Variables (ENV) and Descriptions (Desc)")
+	zap.L().Info("Environment Variables (ENV) and Descriptions (Desc)")
 
 	fmt.Printf("%-20s %-40s %-10s\n", "ENV", "Desc", "Default")
 

@@ -2,14 +2,13 @@
 
 ## Configuration
 
-| Key          | Description                          | Default    |
-|--------------|--------------------------------------|------------|
-| `DB_HOST`    | The database hostname                | `localhost`|
-| `DB_PORT`    | The database port                    | `5432`     |
-| `DB_USER`    | The database user                    | `N/A`      |
-| `DB_PASS`    | The database password                | `N/A`      |
-| `DB_NAME`    | The database name                    | `N/A`      |
-| `SLEEP_INF`  | Sleep infinitely when done           | `true`     |
+| Key       | Description           | Default     |
+| --------- | --------------------- | ----------- |
+| `DB_HOST` | The database hostname | `localhost` |
+| `DB_PORT` | The database port     | `5432`      |
+| `DB_USER` | The database user     | `postgres`  |
+| `DB_PASS` | The database password | `password`  |
+| `DB_NAME` | The database name     | `postgres`  |
 
 ## How to use
 
@@ -22,6 +21,7 @@ docker run --rm -it \
         -e DB_USER=myuser \
         -e DB_PASS=mypassword \
         -e DB_NAME=mydb \
+        -p 8080:8080 \
         ghcr.io/phillezi/test-psql-conn:latest
 ```
 
